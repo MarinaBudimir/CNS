@@ -1,0 +1,30 @@
+1. What is the Address Resolution Protocol (ARP), and what is its role in a network?
+To je komunikacijski protokol koji povezuje IP adresu i fiksnu fizičku adresu nekog uređaja na lokalnoj mreži. 
+Prevodi IP adrese u MAC adrese.
+Olakšava komunikaciju uređaja spojenih na mrežu. 
+
+2. What is a Man-in-the-Middle (MitM) attack, and how does ARP spoofing enable it?
+Vrsta cyber napada u kojem napadač potajno presreće i prenosi poruke između dviju strana koje vjeruju da komuniciraju jedna sa drugom. 
+Arp spoofing - napadač ubacuje lažne informacije u promet lokalne mreže kako bi preusmjerio veze na svoj uređaj. 
+
+3. How does an attacker use ARP spoofing to intercept network traffic?
+Iskorištava se ranjivost ARP protokola i vrši se MitM napad tako da se presreće komunikacija između crypto Oracle servera i arp Client računala.
+
+4. How is the cookie used to derive the encryption/decryption key?
+Kljuc za enkripciju/dekripciju je izveden iz tajne vrijednosti koju zovemo cookie
+
+5. What REST API request do you need to send to the crypto oracle the secret cookie?
+GET /arp/cookie
+
+6. How do you obtain the authentication token?
+Autentikacijski token može se zatražiti od crypto Oracle servera.
+Treba se autenticirati slanjem korisničkog imena/Docker containera i lozinke. 
+
+7. How do you use the authentication token to obtain the cookie?
+Slanjem REST API zahtjeva crypto Oracle serveru
+
+8. What encryption mode is used to encrypt the challenge in this lab?
+CBC enkripcijski mod rada (AES-CBC)
+
+9. What tool can you use to capture network traffic on a local network interface?
+tcpdump (sudo tcpdump)
